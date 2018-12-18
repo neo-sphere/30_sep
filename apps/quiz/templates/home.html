@@ -1,0 +1,22 @@
+<html>
+    <head>
+            <title>{{ title }}</title>
+    </head>
+    
+    <body>
+        <h1>
+            {% if username %}
+                Welcome {{ username | upper }} !
+            {% else %}
+                Welcome Learning Platform
+            {% endif %}
+        </h1>
+        <h3>
+            {% for name in data %}
+             {{ forloop.counter }}   {{ name }}</br>
+            {% empty %}
+            <h4> no data to show </h4>
+            {% endfor %}
+        </h3>
+    </body>
+</html>

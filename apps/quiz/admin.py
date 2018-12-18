@@ -19,5 +19,3 @@ class CategoryAdmin(admin.ModelAdmin):
             return ('name', 'slug', 'created', 'updated', 'is_active')
         else:
             return ('name', 'slug','updated')
-
-
