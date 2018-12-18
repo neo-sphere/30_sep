@@ -4,9 +4,8 @@ from django.shortcuts import render
 def home(request):
     template = 'home.html'
     context = {
-        "username": 'Sunil',
         'title': 'Home page ',
-        # 'data': ['santosh', 'ram', 'shyam'],
+        'data': ['santosh', 'ram', 'shyam'],
     }
     return render(request, template, context)
 

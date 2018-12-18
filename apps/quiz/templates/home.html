@@ -5,9 +5,10 @@
     
     <body>
         <h1>
-            {% if username %}
-                Welcome {{ username | upper }} !
+            {% if request.user.is_authenticated %}
+                Welcome {{ request.user | capfirst }} !
             {% else %}
+                <a href="{% url 'user_profile:login' %}"> Login </a>
                 Welcome Learning Platform
             {% endif %}
         </h1>
